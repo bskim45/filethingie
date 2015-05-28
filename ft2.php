@@ -109,7 +109,7 @@ function ft_check_fileactions() {
 function ft_validate_filename($file)
 {
 	// Make sure the file doesn't start with a period, contain unwanted characters, or end in a period.
-	$pattern = '^[^\.]((\.)?(([\w~!]){1,}))+$';
+	$pattern = '/^[^\.]((\.)?(([\w~!]){1,}))+$/';
 	$result = preg_match($pattern, $file);
 	return $result;
 }
